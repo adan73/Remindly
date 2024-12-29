@@ -3,8 +3,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from './screens/LogIn'; // Adjust your file path if necessary
-import SignIn from './screens/SignIn'; // Adjust your file path if necessary
+import Login from './screens/LogIn'; 
+import SignIn from './screens/SignIn'; 
+import HomePage from './screens/HomePage'; 
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,11 @@ export default function App(): JSX.Element {
           component={SignIn}
           options={{ headerShown: false }} // Hide the header
         />
+         <Stack.Screen
+          name="HomePage"
+          component={HomePage}
+          options={{ headerShown: false }} // Hide the header
+        />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
@@ -35,7 +41,7 @@ const LoginScreen = ({ navigation }: { navigation: any }) => {
       <Text>Login Screen</Text>
       <Button
         title="Log In"
-        onPress={() => navigation.navigate('Login')} // Stay on the Login screen
+        onPress={() => navigation.navigate('HomePage')} 
       />
       <Button
         title="Sign In"

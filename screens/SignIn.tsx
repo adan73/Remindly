@@ -27,7 +27,7 @@ const Signin: React.FC<SigninProps> = ({ navigation }) => {
       <Text style={styles.SignIn}>Enter your new Password:</Text>
       <TextInput style={styles.input} secureTextEntry />
       
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} onPress={handleSignin}>
         <Text style={styles.buttonText}>Sign in</Text>
       </TouchableOpacity>
 

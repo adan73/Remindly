@@ -16,6 +16,9 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
   const goToSignIn = () => {
     navigation.navigate('SignIn');
   };
+  const goToHomerPage = () => {
+    navigation.navigate('HomePage');
+  };
 
   return (
     <View style={styles.container1}>
@@ -24,7 +27,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
       <TextInput style={styles.input} placeholder="UserName" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
       
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+      <TouchableOpacity style={styles.button} onPress={goToHomerPage}>
         <Text style={styles.buttonText}>Log In</Text>
       </TouchableOpacity>
 
