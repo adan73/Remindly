@@ -34,7 +34,6 @@ export default function App(): JSX.Element {
   );
 }
 
-// Renamed the local Login component to LoginScreen to avoid naming conflict
 const LoginScreen = ({ navigation }: { navigation: any }) => {
   return (
     <View style={styles.container}>
@@ -51,7 +50,6 @@ const LoginScreen = ({ navigation }: { navigation: any }) => {
   );
 };
 
-// SignIn Screen where the SignIn button takes you back to the Login screen
 const SignInScreen = ({ navigation }: { navigation: any }) => {
   return (
     <View style={styles.container}>

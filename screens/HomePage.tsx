@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { View,Text,StyleSheet,Animated,TouchableOpacity,Dimensions,ScrollView,} from 'react-native';
 import MapView, { Region } from 'react-native-maps';
 import * as Location from 'expo-location';
+import Header from './Header';
 
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const BOX_HEIGHT = 300;
@@ -76,6 +77,7 @@ const Home: React.FC = () => {
 
   return (
     <View style={styles.container}>
+        <Header />
       <View style={styles.MapContainer}>
         {location ? (
           <MapView
